@@ -60,3 +60,17 @@ config NVME_FC
 	  from https://github.com/linux-nvme/nvme-cli.
 
 	  If unsure, say N.
+
+config NVME_TCP
+	tristate "NVMe over Fabrics TCP host support"
+	select NVME_CORE
+	select NVME_FABRICS
+	select SG_POOL
+	help
+	  This enables the NVMe TCP initiator support.  This allows you to
+	  use remote block devices exported over TCP using the NVMe protocol.
+
+	  To configure a NVMe over Fabrics controller use the nvme-cli tool
+	  from https://github.com/linux-nvme/nvme-cli.
+
+	  If unsure, say N.
