@@ -70,14 +70,14 @@ grub2-set-default 'Red Hat Enterprise Linux Server (4.11.0) 7.x (Maipo)’
 ```
 reboot
 ```
-### Confirm that the kernel has been updated:
+### Confirm that the kernel has been updated
 ```
 uname -a 
 Linux host.name 4.11.0 #1 SMP date  x86_64 GNU/Linux
 ```
 
 ## NVMe CLI Update
-### Download the correct version of the NVMe cli utility that inlcudes TCP:
+### Download the correct version of the NVMe cli utility that inlcudes TCP
 ```
 git clone https://github.com/solarflarecommunications/nvme-cli
 ```
@@ -124,7 +124,7 @@ This should automatically load the dependencies `nvme`, `nvme_core`, and `nvme_f
 ```
 modprobe nvme_tcp
 ```
-### Use the nvme cli utility to connect the initiator to the target:
+### Use the nvme cli utility to connect the initiator to the target
 ```
 nvme connect -t tcp -a 10.0.0.1 -s 11345 -n ramdisk
 ```
