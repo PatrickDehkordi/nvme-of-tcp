@@ -45,7 +45,7 @@ Under "Block Devices" at a minimum select
 "NVM Express block device"
 "NVMe over Fabrics TCP host support"
 "NVMe over Fabrics TCP target support"
-Save and Exit the text based kernel configuration utlity. 
+Save and Exit the text based kernel configuration utility. 
 
 ### Confirm the changes
 ```
@@ -90,7 +90,7 @@ make install
 ## Target setup
 
 ### Load the target driver
-This should automatically load the dependencies "nvme", "nvme_core", and "nvme_fabrics"
+This should automatically load the dependencies `nvme`, `nvme_core`, and `nvme_fabrics`
 ```
 modprobe nvmet_tcp
 ```
@@ -117,11 +117,12 @@ ln -s /sys/kernel/config/nvmet/subsystems/ramdisk /sys/kernel/config/nvmet/ports
 
 ## Initiator setup
 
-### Load the initiator driver, this should automatically load the dependencies "nvme", "nvme_core", and "nvme_fabrics":
+### Load the initiator driver
+This should automatically load the dependencies `nvme`, `nvme_core`, and `nvme_fabrics`.
 ```
 modprobe nvme_tcp
 ```
-### Use the nvme cli utility to connect the initiator to the traget:
+### Use the nvme cli utility to connect the initiator to the target:
 ```
 nvme connect -t tcp -a 10.0.0.1 -s 11345 -n ramdisk
 ```
