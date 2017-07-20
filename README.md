@@ -1,7 +1,7 @@
 # nvme-of-tcp
 
 This provides a TCP transport for NVMe over fabrics. 
-It is intended to offer performance close to RDMA without the complexity.
+It is intended to offer performance similar to RDMA without the complexity.
 Configuration is similar to RDMA.
 
 ## Notes
@@ -58,7 +58,7 @@ make -j 16
 make -j 16 modules_install install 
 ```
 ### Confirm that the build is included in the boot menu entry
-(This is depedent on the bootloader being used, for GRUB2)
+(This is depedent on the bootloader being used)
 ```
 cat /boot/grub2/grub.cfg | grep menuentry
 ```
