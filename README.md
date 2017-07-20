@@ -95,6 +95,7 @@ This should automatically load the dependencies `nvme`, `nvme_core`, and `nvme_f
 modprobe nvmet_tcp
 ```
 ### Set up storage subsystem
+Assuming 'ramdisk' refers to the name for the storage subsystem, and 'dev/ram0' refers to the NVMe device:
 ```
 mkdir /sys/kernel/config/nvmet/subsystems/ramdisk
 echo 1 > /sys/kernel/config/nvmet/subsystems/ramdisk/attr_allow_any_host
@@ -103,6 +104,7 @@ echo -n /dev/ram0 > /sys/kernel/config/nvmet/subsystems/ramdisk/namespaces/1/dev
 echo 1 > /sys/kernel/config/nvmet/subsystems/ramdisk/namespaces/1/enable
 ```
 ### Set up port
+Assuming the connection is over address '10.0.0.1' and port '11345': 
 ```
 mkdir /sys/kernel/config/nvmet/ports/1
 echo "ipv4" > /sys/kernel/config/nvmet/ports/1/addr_adrfam
