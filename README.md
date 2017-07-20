@@ -58,7 +58,7 @@ make -j 16
 make -j 16 modules_install install 
 ```
 ### Confirm that the build is included in the boot menu entry
-(This is depedent on the bootloader beign used, for GRUB2)
+(This is depedent on the bootloader being used, for GRUB2)
 ```
 cat /boot/grub2/grub.cfg | grep menuentry
 ```
