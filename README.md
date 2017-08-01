@@ -31,6 +31,7 @@ yum install gcc make git ctags ncurses-devel openssl-devel
 ### Download and unzip or clone the repo into a local directory
 ```
 git clone https://github.com/solarflarecommunications/nvme-of-tcp/tree/v4.11-nvme-of-tcp
+unzip nvme-of-tcp-4.11-nvme-of-tcp.zip 
 cd nvme-of-tcp-4.11
 ```
 ### Create a .config file or copy the existing .config file into the build direcotry
