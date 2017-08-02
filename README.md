@@ -104,7 +104,7 @@ make install
 ## Target setup
 
 ### Load the target driver
-This should automatically load the dependencies `nvme`, `nvme_core`, and `nvme_fabrics`
+This should automatically load the dependencies `nvme`, `nvme_core`, and `nvmet`
 ```
 modprobe nvmet_tcp
 ```
