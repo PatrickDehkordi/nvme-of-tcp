@@ -51,6 +51,19 @@ Save and Exit the text based kernel configuration utility.
 ### Confirm the changes
 ```
 grep NVME_ .config
+:
+CONFIG_NVME_CORE=m
+CONFIG_BLK_DEV_NVME_SCSI=y
+CONFIG_NVME_FABRICS=m
+CONFIG_NVME_RDMA=m
+CONFIG_NVME_FC=m
+CONFIG_NVME_TCP=m
+CONFIG_NVME_TARGET=m
+CONFIG_NVME_TARGET_LOOP=m
+CONFIG_NVME_TARGET_RDMA=m
+CONFIG_NVME_TARGET_FC=m
+CONFIG_NVME_TARGET_FCLOOP=m
+CONFIG_NVME_TARGET_TCP=m
 ```
 ### Compile and install the kernel 
 (To save time you can utilize multiple cpus by including the j option)
